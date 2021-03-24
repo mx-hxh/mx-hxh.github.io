@@ -2,7 +2,7 @@
 
 ---
 
-# **<p style="text-align: center;">Predictive Analytics</p>**
+# **->Predictive Analytics<-**
 
 
 
