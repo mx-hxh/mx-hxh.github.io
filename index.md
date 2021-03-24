@@ -4,7 +4,7 @@
 
 ### Predictive Analytics
 
-[Identify performance issue in a wind farm and predict future outputs](/sample_page)
+Identify performance issue in a wind farm and predict future outputs
 
 <img src="images/icons8-wind-turbine-64.png?raw=true"/>
 
