@@ -1,21 +1,21 @@
-## <div align="center">Portfolio</div>
+# <div align="center">Portfolio</div>
 
 ---
 
-### <div align="center">Predictive Analytics</div>
+## <div align="center">Predictive Analytics</div>
 
 <div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
 
-#### [Identify performance issue in a wind farm and predict future outputs](/pdf/WindFarm.pdf)
+### [Identify performance issue in a wind farm and predict future outputs](/pdf/WindFarm.pdf)
 
-##### Introduction
+#### Introduction
 This project aims to:
 1. detect performance issues in a given wind farm such as certain inverters require slight maintenance or become faulty that require replacement.
 2. predict windfarm output in the short future for better grid management.
 
 Data source: [kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data)
 
-##### Project Highlights
+#### Project Highlights
 **Filter outliers from solar panel output**
 
 
