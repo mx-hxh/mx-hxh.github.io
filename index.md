@@ -41,6 +41,7 @@ After data manipulation, the time-series problem could be converted to an I.I.D 
 
 <div align="center"><img src="images/IID_Prediction.JPG" width="700"/></div>
 
+
 ### **Project Delivery**
 
 [Project presentaion](/pdf/WindFarm_Presentation.pdf)
