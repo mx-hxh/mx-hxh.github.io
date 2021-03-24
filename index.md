@@ -2,11 +2,11 @@
 
 ---
 
-# **->Predictive Analytics<-**
+# **Predictive Analytics**
 
 
 
-## **<p style="text-align: center;">Identify performance issues in a wind farm and predict future power outputs</p>**
+## <div align="center">**Identify performance issues in a wind farm and predict future power outputs**</div>
 
 <div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
 
