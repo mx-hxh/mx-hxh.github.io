@@ -1,8 +1,8 @@
-# **<div align="center">Portfolio</div>**
+# **Portfolio**
 
 ---
 
-# **<div align="center">Predictive Analytics</div>**
+# **Predictive Analytics**
 
 
 
