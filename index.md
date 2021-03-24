@@ -1,4 +1,4 @@
-# <div align="center">Portfolio</div>
+# **<div align="center">Portfolio</div>**
 
 ---
 
@@ -6,7 +6,7 @@
 
 <div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
 
-### [Identify performance issue in a wind farm and predict future outputs](/pdf/WindFarm.pdf)
+### Identify performance issues in a wind farm and predict future power outputs
 
 #### Introduction
 This project aims to:
@@ -16,7 +16,7 @@ This project aims to:
 Data source: [kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data)
 
 #### Project Highlights
-**Filter outliers from solar panel output**
+**Filter outliers from solar panel's inverter output**
 
 
 ---
