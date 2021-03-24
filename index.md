@@ -6,6 +6,7 @@
 
 <div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
 [©icons8](https://icons8.com/icons/set/wind-farm)
+
 Identify performance issue in a wind farm and predict future outputs
 
 
