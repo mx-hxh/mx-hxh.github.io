@@ -4,9 +4,11 @@
 
 ## **<div align="center">Predictive Analytics</div>**
 
-<div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
+
 
 ### **<div align="center">Identify performance issues in a wind farm and predict future power outputs</div>**
+
+<div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
 
 #### Introduction
 This project aims to:
@@ -16,7 +18,7 @@ This project aims to:
 Data source: [kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data)
 
 #### Project Highlights
-**Filter outliers from solar panel's inverter output**
+Filter outliers from solar panel's inverter output
 
 
 ---
