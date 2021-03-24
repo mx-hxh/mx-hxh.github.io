@@ -3,7 +3,7 @@
 ---
 
 # **Predictive Analytics**
-## **Identify performance issues in a wind farm and predict future power outputs**
+## **I. Identify performance issues in a wind farm and predict future power outputs**
 
 <div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
 
@@ -48,19 +48,11 @@ After data manipulation, the time-series problem could be converted to an I.I.D 
 
 [Project report](/pdf/WindFarm_Report.pdf)
 
-
-
-
-
 ---
-[Project 2 Title](/pdf/WindFarm.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
----
-[Project 3 Title](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+# **Natural Language Processing**
 
----
+
 
 ### Category Name 2
 
