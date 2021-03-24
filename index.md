@@ -18,7 +18,7 @@ This project aims to:
 Data source: [kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data)
 
 ### **Project Highlights**
-####Filter outliers from solar panel's inverter outputs:
+#### Filter outliers from solar panel's inverter outputs:
 
 In order to identify instances of sub-optimal performance of the inverters, a model that describes the 'optimal' performance needs to be constructed. And any actual output significantly deviates from the predicted value of this 'optimal' performance model would be deemed as problematic that requires further processing.
 
@@ -29,6 +29,15 @@ In order to identify instances of sub-optimal performance of the inverters, a mo
 <div align="center">Data filtering process</div>
 
 <div align="center"><img src="images/After_Filtering.JPG" width="700"/></div>
+
+#### Predict future power outputs based on historical data:
+
+In order to perdict future power outputs based on historical data, time-series analysis is required. But traditional univariate time-series models' perfromance is limited (more biased) as they rely only on time and the target variable itself to make predictions. In this project we assume that the current time T is only dependent on the past X time periods. Using data manipulation, a dataset is constructed as below.
+
+<div align="center">Data manipulation</div>
+
+<div align="center"><img src="images/IID_Manipulation.JPG" width="700"/></div>
+
 
 
 
