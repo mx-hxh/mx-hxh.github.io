@@ -6,15 +6,14 @@
 
 <div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
 
-<div align="center">[©icons8](https://icons8.com/icons/set/wind-farm)</div>
+#### [Identify performance issue in a wind farm and predict future outputs](/pdf/WindFarm.pdf)
 
-
-Identify performance issue in a wind farm and predict future outputs
-
+##### Project Highlights
+**Filter outliers from solar panel output**
 
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
+[Project 2 Title](/pdf/WindFarm.pdf)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
