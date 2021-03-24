@@ -35,6 +35,19 @@ In order to perdict future power outputs based on historical data, time-series a
 
 <div align="center"><img src="images/IID_Manipulation.JPG" width="700"/></div>
 
+After data manipulation, the time-series problem could be converted to an I.I.D (Independent and Identically Distributed) problem. Conventional ML model such as random forest could be used to make predictions.
+
+<div align="center">Prediction</div>
+
+<div align="center"><img src="images/IID_Prediction.JPG" width="700"/></div>
+
+### **Project Delivery**
+
+[Project presentaion](/pdf/WindFarm_Presentation.pdf)
+
+[Project report](/pdf/WindFarm_Report.pdf)
+
+
 
 
 
