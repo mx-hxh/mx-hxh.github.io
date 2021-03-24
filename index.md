@@ -5,6 +5,7 @@
 ### <div align="center">Predictive Analytics</div>
 
 <div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
+<img src="https://img.icons8.com/cotton/64/000000/wind-turbine.png"/>
 Identify performance issue in a wind farm and predict future outputs
 
 
