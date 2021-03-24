@@ -2,7 +2,7 @@
 
 ---
 
-### Predictive Analytics
+### <div align="center">Predictive Analytics</div>
 
 <div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
 Identify performance issue in a wind farm and predict future outputs
