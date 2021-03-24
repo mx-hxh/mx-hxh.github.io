@@ -60,6 +60,7 @@ This project aims to classify positive and negative sentiments from a set of unl
 
 ### **Project Delivery**
 [Code](/Codes/R/US_Airline_Sentiment)
+
 [Project report](/pdf/USAirline_Report.pdf)
 
 ## **II. Food trend identification from facebook posts**
@@ -71,6 +72,7 @@ This project aims to help identifying food related trends from 4 million food re
 
 ### **Project Delivery**
 [Code](/Codes/R/Food_Trend_Facebook)
+
 [Project report](/pdf/Cauliflower_Report.pdf)
 
 ---
