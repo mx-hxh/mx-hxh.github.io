@@ -4,9 +4,9 @@
 
 ### Predictive Analytics
 
-Identify performance issue in a wind farm and predict future outputs
+<img src="images/icons8-wind-turbine-64.png?raw=true"/> #### Identify performance issue in a wind farm and predict future outputs
 
-<img src="images/icons8-wind-turbine-64.png?raw=true"/>
+
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
