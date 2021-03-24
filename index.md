@@ -10,15 +10,15 @@
 
 <div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
 
-#### Introduction
+#### **Introduction**
 This project aims to:
 1. detect performance issues in a given wind farm such as certain inverters require slight maintenance or become faulty that require replacement.
 2. predict windfarm output in the short future for better grid management.
 
 Data source: [kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data)
 
-#### Project Highlights
-Filter outliers from solar panel's inverter outputs:
+#### **Project Highlights**
+##### **Filter outliers from solar panel's inverter outputs:**
 
 In order to identify instances of sub-optimal performance of the inverters, a model that describes the 'optimal' performance needs to be constructed. And any actual output significantly deviates from the predicted value of this 'optimal' performance model would be deemed as problematic that requires further processing.
 
