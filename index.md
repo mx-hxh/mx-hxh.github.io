@@ -51,6 +51,25 @@ After data manipulation, the time-series problem could be converted to an I.I.D 
 ---
 
 # **Natural Language Processing**
+## **I. Sentiment classification with US Airline twitts**
+
+<div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
+
+### **Introduction**
+This project aims to classify positive and negative sentiments from a set of unlabeled twitts about major US airlines.
+
+### **Project Delivery**
+[Project report](/pdf/USAirline_Report.pdf)
+
+## **II. Food trend identification from facebook posts**
+
+<div align="center"><img src="images/icons8-facebook-100.png?raw=true"/></div>
+
+### **Introduction**
+This project aims to help identifying food related trends from 4 million food related facebook posts span across 4 years.
+
+### **Project Delivery**
+[Project report](/pdf/Cauliflower_Report.pdf)
 
 
 
