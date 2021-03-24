@@ -1,0 +1,142 @@
+library(DBI)
+library(RMySQL)
+library(tm)
+library(caret)
+#install.packages('readtext')
+library(readtext)
+library(quanteda)
+
+setwd('C:\\Rochester\\Course\\CIS 434\\Final')
+
+pos_words = readtext(file = 'positive words.txt')$text
+pos_words = strsplit(pos_words,'\\n')[[1]]
+neg_words = readtext(file = 'negative words.txt')$text
+neg_words = c(strsplit(neg_words,'\\n')[[1]],c('wtf', 'not', 'no', 'nope',
+                                               'how','why', 'when' , 'what',
+                                               'wait','waiting',
+                                               'freakin', 'never', 'ever',
+                                               'screws','screw','screwing','screwed',
+                                               'piss','pissed','pissing',
+                                               'ass','asshole','assholes',
+                                               'suck','sucks','sucked','sucker',
+                                               'stranded','stuck','stucked',
+                                               'miss','missing',
+                                               'kick','kicks','kicking','kicked',
+                                               'tarmac',
+                                               'hour','hrs','hours','mins','minute','minutes','days','months','month',
+                                               'rudest',
+                                               'horror','cancelled','ripoff')) # questions tend to be negative
+neg_words = stemDocument(neg_words)
+##################### Retrive Unlabeled Data #####################
+
+mydata =  read.csv('unlabeled.csv',header = T, stringsAsFactors = F)
+mydata$tweet = gsub("[[:punct:]]", " ", mydata$tweet)
+temp <- mydata[,c("id","tweet")]
+
+##################### Construct DTM & LDA for Unlabeled Data #####################
+
+# names(temp) = c("doc_id", "text") # The first column must be named "doc_id" and contain a unique string identifier for each document. The second column must be named "text".
+# docs <- Corpus(DataframeSource(temp))
+# 
+# mystopwords <- stopwords('english')[!stopwords('english') %in% c('how','when','why', 'against','what','no','not')] # customize stopwords, as question tend to be negative
+# dtm.control = list(tolower=T, removePunctuation=T, removeNumbers=T, 
+#                    #stopwords=c(mystopwords), 
+#                    stopwords=F,
+#                    stripWhitespace=F, stemming=F)
+# dtm.full_u <- DocumentTermMatrix(docs, control=dtm.control)
+dtm.full_u = dfm(mydata$tweet, tolower = T, stem = T)
+u_words =colnames(dtm.full_u)
+X_u = as.matrix(dtm.full_u)
+
+##################### Retrive Labeled Data #####################
+
+labeled = read.csv('Tweets.csv', header = T, stringsAsFactors = F)
+labeled = labeled[labeled$airline_sentiment_confidence == 1,]
+labeled = labeled[c('text','airline_sentiment')]
+labeled = data.frame(id = 1:nrow(labeled), labeled)
+labeled$text = gsub("[[:punct:]]", " ", labeled$text )
+colnames(labeled) = c('id', 'text','label')
+labeled$label[labeled$label %in% c('neutral','positive')] = 'non-negative'
+
+##################### Construct DTM & LSA for Labeled Data #####################
+
+# temp = labeled[c(1,2)]
+# names(temp) = c("doc_id", "text") # The first column must be named "doc_id" and contain a unique string identifier for each document. The second column must be named "text".
+# docs <- Corpus(DataframeSource(temp))
+# 
+# dtm.control = list(tolower=T, removePunctuation=T, 
+#                    removeNumbers=T, 
+#                    stopwords=F, 
+#                    stripWhitespace=T, stemming=F)#,
+# #weighting = function(x) weightTfIdf(x, normalize = FALSE))
+# dtm.full_l <- DocumentTermMatrix(docs, control=dtm.control)
+dtm.full_l = dfm(labeled$text, tolower = T, stem = T)
+l_words =colnames(dtm.full_l)
+X_l = as.matrix(dtm.full_l)
+
+##################### Construct Model on Labedled Data #####################
+
+get_words = function(X, words){
+  logi = as.logical(X)
+  words = words[logi]
+  words
+}
+
+tuned_sent = function(X, param, true){
+  words = apply(X, MARGIN = 1, FUN = get_words, words = colnames(X))
+  f1_num = rep(0,length(param))
+  for(i in 1:length(param)){
+    neg_weight = param[i]
+    get_sent = function(x, neg_weight){
+      pos = sum(x %in% pos_words)
+      neg = sum(x %in% neg_words)
+      sent_num = pos - neg_weight * neg
+      sent = ifelse(sent_num >= 0, 'non-negative', 'negative')
+      sent
+    }
+    sents = lapply(words, FUN = get_sent, neg_weight = neg_weight)
+    sents = unlist(sents)
+    f1_temp = F_meas(table(sents, true), relevant = 'non-negative',beta = 1)
+    f1_num[i] = f1_temp
+  }
+  tune_res = data.frame(param, f1_num)
+  tune_res
+}
+
+param = c(seq(1.1,1.5,by = 0.1), seq(2,10,by = 2))
+tune_res = tuned_sent(X_l, param, labeled$label)
+
+neg_weight = min(tune_res$param[which.max(tune_res$f1_num)])
+
+get_sent = function(x){
+  pos = sum(x %in% pos_words)
+  neg = sum(x %in% neg_words)
+  sent_num = pos - neg_weight * neg
+  sent = ifelse(sent_num >= 0, 'non-negative', 'negative')
+  sent
+}
+
+words = apply(X_l, MARGIN = 1, FUN = get_words, words = l_words)
+sents = lapply(words, FUN = get_sent)
+sents = unlist(sents)
+table(sents, labeled$label) # number of non_negative is very high
+
+
+ggplot(data=tune_res, aes(x=param, y=f1_num)) +
+  geom_line() +
+  geom_vline(xintercept = neg_weight, color = 'blue') +
+  ggtitle('F1 over Negative Weights') +
+  ylab('F1') +
+  xlab('Negative Weights')
+
+##################### Prediction on Unlabeled Data #####################
+
+words = apply(X_u, MARGIN = 1, FUN = get_words, words = u_words)
+sents = lapply(words, FUN = get_sent)
+sents = unlist(sents)
+
+u_res = data.frame(mydata, sents)
+table(sents)
+
+hand_in = u_res[sents == 'non-negative', c('id', 'tweet')]
+write.csv(hand_in, 'Miao_Xi_1.csv', row.names = F)
