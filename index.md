@@ -53,7 +53,7 @@ After data manipulation, the time-series problem could be converted to an I.I.D 
 # **Natural Language Processing**
 ## **I. Sentiment classification with US Airline twitts**
 
-<div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
+<div align="center"><img src="images/icons8-twitter-64.png?raw=true"/></div>
 
 ### **Introduction**
 This project aims to classify positive and negative sentiments from a set of unlabeled twitts about major US airlines.
@@ -71,15 +71,11 @@ This project aims to help identifying food related trends from 4 million food re
 ### **Project Delivery**
 [Project report](/pdf/Cauliflower_Report.pdf)
 
+---
 
+# **Information System & Design**
+## **Coming soon!**
 
-### Category Name 2
-
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
 
 ---
 
