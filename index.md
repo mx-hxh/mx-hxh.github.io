@@ -24,11 +24,11 @@ In order to identify instances of sub-optimal performance of the inverters, a mo
 
 Data Before filtering
 
-<img src="images/Before_Filtering.JPG" width="500"/>
+<img src="images/Before_Filtering.JPG" width="700"/>
 
 Data filtering process
 
-<img src="images/After_Filtering.JPG" width="500"/>
+<img src="images/After_Filtering.JPG" width="700"/>
 
 
 
