@@ -1,0 +1,193 @@
+library(ggplot2)
+library(tm)
+library(readtext)
+library(text2vec)
+#install.packages('quanteda')
+library(quanteda)
+library(data.table)
+library(lubridate)
+library(zoo)
+setwd('C:\\Rochester\\Course\\CIS 434\\Final\\Project 2')
+
+############################# preprocess food words lexicon #############################
+
+food_words = readtext(file = 'Lexcion.txt')$text
+food_words = unique(tolower(strsplit(food_words, '\\s')[[1]]))
+food_words = stemDocument(food_words)
+
+############################# predefined functions #############################
+
+# read monthly fb posts and only extract food related words
+read_month = function(year_r, month_r){
+  
+  folder = paste('fb', year_r, sep = '')
+  file = paste('fpost-', year_r, '-', month_r, '.csv', sep = '')
+  direct = paste(folder, '/', file, sep = '')
+  fb = read.csv(direct,  stringsAsFactors = F, quote = "", sep = ',', header = F)
+  cols = colnames(fb)
+  fb$text = do.call(paste, c(fb[cols], sep=" "))
+  for (co in cols) fb[co] <- NULL
+  fb$text = gsub("[[:punct:]]", " ", fb$text)
+  fb$doc_id = 1:nrow(fb)
+  fb = fb[,c(2,1)]
+  fb
+} 
+# year_r: string, the year of fb posts
+# month_r: string the month of fb posts
+
+# count number of post each month
+num_fb = function(fb){
+  nrow(fb)
+}
+# output: number of fb post monthly
+
+# ruduce wirds, keep only food words in facebook posts
+word_pre = function(fb, num){
+  
+  # define local function  
+  get_words = function(x){
+    x = as.logical(x)
+    x = colnames(dtm.full)[x]
+    x
+  } # extract only food words for each document from dtm
+  
+  doc_len = nrow(fb) # the number of documents
+  doc_int = round(doc_len/num, 0) + 1 # how many time should we repeat reading
+  
+  fb_less = data.frame() # a new data frame includes only food words in every facebook post
+  counter = 0
+  for( i in 1:doc_int){
+    r_start = num * (i-1) + 1
+    r_end = r_start + num-1
+    if(r_end > doc_len) r_end = doc_len
+    
+    docs <- Corpus(DataframeSource(fb[r_start:r_end,]))
+    mystopwords <- c('@','http')
+    dtm.control = list(tolower=T, removePunctuation=T, removeNumbers=T, 
+                       stopwords=c(mystopwords, stopwords('english')),
+                       stripWhitespace=F, stemming=T)
+    
+    dtm.full <- as.matrix(DocumentTermMatrix(docs, control=dtm.control))
+    words_dtm = colnames(dtm.full)
+    
+    food_tf = words_dtm %in% food_words
+    dtm.full = dtm.full[, food_tf]
+    dtm.full = apply(dtm.full, MARGIN = c(1,2), FUN = function(x) ifelse(x > 1, 1, x))
+    
+    less_words = apply(dtm.full, MARGIN = 1, FUN = get_words)
+    less_words = lapply(less_words, FUN = paste, collapse = ' ')
+    less_words = data.frame(doc_id = r_start: r_end, text = matrix(unlist(less_words), nrow=length(less_words), byrow=T))
+    
+    temp = less_words
+    if( i == 1){
+      fb_less = temp
+    }else{
+      fb_less = rbind(fb_less, temp)
+    }
+    
+    if(r_end == doc_len){ # when monthly document is finished processing, clear all memory
+      less_words = NULL
+      dtm.full = NULL
+      fb = NULL
+      words = NULL
+      break
+    } 
+  } # loop through all intervals to process data
+  fb_less$text = as.character(fb_less$text)
+  fb_less
+} 
+# fb: dataframe contain monthly fb post
+# num: integer the number of posts read in one single iteration
+# output : a data rame similar to original csv with only food words in each post
+
+# construct co-occuruence matrix for food words in every tweet, and record co-occur words pairs and their frequency
+get_copair = function(fb_less, fb_num){
+  co_mat = fcm(fb_less$text, context = 'document', count = 'frequency') # co-occurance matrix
+  co_mat = as.matrix(co_mat)
+  uni_co = unique(as.vector(co_mat[co_mat>0]))
+  uni_co  = uni_co [uni_co > 4]
+  word_pair = data.frame() # construct a data frame that store word pair and their coocurance time
+  for ( i in 1:length(uni_co)){
+    num = uni_co[i]
+    a = which(co_mat==num, arr.ind=TRUE)
+    word_1 = rownames(co_mat)[a[,1]]
+    word_2 = colnames(co_mat)[a[,2]]
+    co_num = num
+    temp = data.frame(word_1, word_2, co_num)
+    if( i == 1){
+      word_pair = temp
+    }else{
+      word_pair = rbind(word_pair, temp)
+    }
+  }
+  word_pair$date = paste(year_r, '-', month_r, '-01', sep = '')
+  word_pair$score = word_pair$co_num/fb_num * 100
+  word_pair
+}
+# fb_num: number of fb post monthly
+# fb_less: datarfame output by read_month
+# output: dataframe contain each co-occur word pairs and their frequency
+
+############################# automatically process all data #############################
+
+#################################################################################################################
+# beaware this part took 2 hours to run, if want to check visualization, please directly go to the folowing block
+#################################################################################################################
+
+years = c('2011','2012','2013', '2014', '2015')
+months = as.character(seq(1 , 12, by = 1))
+
+st = proc.time()
+all_pair = data.frame()
+for (year_r in years){
+  for( month_r in months){
+    fb = read_month(year_r, month_r)
+    fb_num = num_fb(fb)
+    fb_less = word_pre(fb, 2000)
+    word_pair =  get_copair(fb_less, fb_num)
+    if( year_r == '2011' &
+        month_r == '1'){
+      all_pair = word_pair
+    }else{
+      all_pair = rbind(all_pair, word_pair)
+    }
+  }
+}
+end_t = proc.time() - st
+end_t
+
+############################# after process the data and visualization #############################
+read.csv(file = 'all_pair.csv', header = T, stringsAsFactors = F)
+backup =all_pair
+backup = data.table(backup)
+backup$date = ymd(backup$date)
+backup$text = do.call(paste, c(backup[, list(word_1,word_2)], sep=" "))
+backup$text_2 = do.call(paste, c(backup[, list(word_2,word_1)], sep=" "))
+
+pumpkin_pie = backup[text == 'pumpkin pie' | text_2 == 'pumpkin pie']
+ggplot(data=pumpkin_pie, aes(x=date, y=score)) +
+  geom_line() +
+  ggtitle('Pumpkin Pie Time Series') +
+  ylab('Score') +
+  xlab('Month')
+
+cauli_rice = backup[text == 'cauliflow rice' | text_2 == 'cauliflow rice']
+ggplot(data=cauli_rice, aes(x=date, y=score)) +
+  geom_line() +
+  ggtitle('Cauliflower Rice Time Series') +
+  ylab('Score') +
+  xlab('Month')
+
+vegi_noodle = backup[text == 'veget noodl' | text_2 == 'veget noodl']
+ggplot(data=vegi_noodle, aes(x=date, y=score)) +
+  geom_line() +
+  ggtitle('Vegetable Noodle Time Series') +
+  ylab('Score') +
+  xlab('Month')
+
+tom_sau = backup[text == 'tomato sausag' | text_2 == 'tomato sausag']
+ggplot(data=tom_sau, aes(x=date, y=score)) +
+  geom_line() +
+  ggtitle('Tomato Sausage Time Series') +
+  ylab('Score') +
+  xlab('Month')
