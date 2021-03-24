@@ -59,6 +59,7 @@ After data manipulation, the time-series problem could be converted to an I.I.D 
 This project aims to classify positive and negative sentiments from a set of unlabeled twitts about major US airlines.
 
 ### **Project Delivery**
+[Code](/Codes/R/US_Airline_Sentiment)
 [Project report](/pdf/USAirline_Report.pdf)
 
 ## **II. Food trend identification from facebook posts**
@@ -69,6 +70,7 @@ This project aims to classify positive and negative sentiments from a set of unl
 This project aims to help identifying food related trends from 4 million food related facebook posts span across 4 years.
 
 ### **Project Delivery**
+[Code](/Codes/R/Food_Trend_Facebook)
 [Project report](/pdf/Cauliflower_Report.pdf)
 
 ---
