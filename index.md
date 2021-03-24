@@ -18,7 +18,9 @@ This project aims to:
 Data source: [kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data)
 
 #### Project Highlights
-Filter outliers from solar panel's inverter output
+Filter outliers from solar panel's inverter outputs:
+In order to identify instances of sub-optimal performance of the inverters, a model that descirbes the 'optimal' performance needs to be constructed. And any actual output significantly diviates from the predicted value of this 'optimal' performance model would be deemed as problematic that requires further processing.
+
 
 
 ---
