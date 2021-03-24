@@ -2,10 +2,10 @@
 
 ---
 
-### Category Name 1 
+### Predictive Analytics
 
-[Project 1 Title](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Identify performance issue in a wind farm and predict future outputs](/sample_page)
+<img src="images/icons8-wind-turbine-64.png?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
