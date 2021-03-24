@@ -3,10 +3,7 @@
 ---
 
 # **Predictive Analytics**
-
-
-
-## <div align="center">**Identify performance issues in a wind farm and predict future power outputs**</div>
+## **Identify performance issues in a wind farm and predict future power outputs**
 
 <div align="center"><img src="images/icons8-wind-turbine-64.png?raw=true"/></div>
 
