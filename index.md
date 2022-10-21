@@ -3,15 +3,31 @@
 ---
 ## **Data Analytics**
 
-**Project 1**: detect performance issues in a given solar plant, identify inverters with underperforming panels
+**<font size="5">Project 1**: detect performance issues in a given solar plant, identify inverters with underperforming panels</font><br>
+**<font size="4">Techniques**:
+ - EDA
+ - Clustering
+ - Time-series analysis
+ </font>
 <br>
-<a  href="https://colab.research.google.com/drive/1btPn-c57E9ND-kv4wNZT-GEnkKFZuW44?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
+<div align="middle"><a  href="https://colab.research.google.com/drive/1btPn-c57E9ND-kv4wNZT-GEnkKFZuW44?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
+</div>
 <div align="left"><img src="images/inverter_light_conversion.png" width="700"/></div> 
 <div align="left"><img src="images/optimal K.png" width="700"/></div> 
 
-Data source: [Kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data)
-More details: [GitHub](https://github.com/mx-hxh/colab-solar)
+Data source: [Kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data) <br>
+More details: [GitHub](https://github.com/mx-hxh/colab-solar)<br>
 
+**<font size="5">Project 2**: detect epistemic injustice towards women on Wikipedia</font><br>
+**<font size="4">Techniques**:
+ - SPARQL
+ - REST API
+ - Multiprocessing
+ - Tableau
+ </font>
+ <div align="middle"><a  href="https://colab.research.google.com/drive/1k4TkItYtppNolsXvqVLrPQvIeGS6mrCy?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
+<iframe src="https://public.tableau.com/app/profile/miao.xi/viz/DecodingEpistemicInjusticetowardsWomenonWikipedia/Dashboard?:showVizHome=no&:embed=true"
+ width="645" height="400"></iframe>
 
 
 ---
