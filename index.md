@@ -4,10 +4,13 @@
 ## **Data Analytics**
 
 **Project 1**: detect performance issues in a given solar plant, identify inverters with underperforming panels
+<br>
 <a  href="https://colab.research.google.com/drive/1btPn-c57E9ND-kv4wNZT-GEnkKFZuW44?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
-<div align="left"><img src="images/inverter_light_conversion.png" width="700"/></div>
+<div align="left"><img src="images/inverter_light_conversion.png" width="700"/></div> 
+<div align="left"><img src="images/optimal K.png" width="700"/></div> 
 
-Data source: [kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data)
+Data source: [Kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data)
+More details: [GitHub](https://github.com/mx-hxh/colab-solar)
 
 
 
