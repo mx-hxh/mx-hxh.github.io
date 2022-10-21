@@ -26,7 +26,7 @@ More details: [GitHub](https://github.com/mx-hxh/colab-solar)<br>
  - Tableau
  </font>
  <div align="left"><a  href="https://colab.research.google.com/drive/1k4TkItYtppNolsXvqVLrPQvIeGS6mrCy?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a><br>
-<iframe src="https://public.tableau.com/app/profile/miao.xi/viz/DecodingEpistemicInjusticetowardsWomenonWikipedia/Dashboard?:showVizHome=no&:embed=true"
+<iframe src="https://public.tableau.com/app/profile/miao.xi/viz/DecodingEpistemicInjusticetowardsWomenonWikipedia/Dashboard?:showAppBanner=false&:showVizHome=no&:embed=true&:origin=viz_share_link"
  width="700" height="400"></iframe>
 
 
