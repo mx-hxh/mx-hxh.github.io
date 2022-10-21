@@ -10,7 +10,7 @@
  - Time-series analysis
  </font>
 <br>
-<div align="middle"><a  href="https://colab.research.google.com/drive/1btPn-c57E9ND-kv4wNZT-GEnkKFZuW44?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
+<div align="left"><a  href="https://colab.research.google.com/drive/1btPn-c57E9ND-kv4wNZT-GEnkKFZuW44?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
 </div>
 <div align="left"><img src="images/inverter_light_conversion.png" width="700"/></div> 
 <div align="left"><img src="images/optimal K.png" width="700"/></div> 
@@ -25,9 +25,9 @@ More details: [GitHub](https://github.com/mx-hxh/colab-solar)<br>
  - Multiprocessing
  - Tableau
  </font>
- <div align="middle"><a  href="https://colab.research.google.com/drive/1k4TkItYtppNolsXvqVLrPQvIeGS6mrCy?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
+ <div align="left"><a  href="https://colab.research.google.com/drive/1k4TkItYtppNolsXvqVLrPQvIeGS6mrCy?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a><br>
 <iframe src="https://public.tableau.com/app/profile/miao.xi/viz/DecodingEpistemicInjusticetowardsWomenonWikipedia/Dashboard?:showVizHome=no&:embed=true"
- width="645" height="400"></iframe>
+ width="700" height="400"></iframe>
 
 
 ---
