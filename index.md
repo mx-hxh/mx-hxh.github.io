@@ -16,13 +16,13 @@
 
 **Visualization**:<br>
 <img src="images/inverter_light_conversion.png" width="700"/> 
-<img src="images/optimal K.png" width="700"/>
+<img src="images/optimal K.png" width="700"/><br>
 
 Data source: [Kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data) <br>
 More details: [GitHub](https://github.com/mx-hxh/colab-solar)
-&nbsp;<br>
+&nbsp;<br>&nbsp;<br>
 **Project 2**: detect epistemic injustice towards women on Wikipedia
-&nbsp;<br>
+</br>
 **Techniques**:
 
  1. SPARQL
@@ -31,13 +31,13 @@ More details: [GitHub](https://github.com/mx-hxh/colab-solar)
  4. Tableau
 
 **Code**:<br>
- <div align="left"><a  href="https://colab.research.google.com/drive/1k4TkItYtppNolsXvqVLrPQvIeGS6mrCy?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a><br>
+<a href="https://colab.research.google.com/drive/1k4TkItYtppNolsXvqVLrPQvIeGS6mrCy?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
  
  **Visualization**:<br>
- <img src="images/Epistemic_injustice_tableau.png" width="700"/> 
+<img src="images/Epistemic_injustice_tableau.png" width="700"/> <br>
 Data source: [Wikidata](https://query.wikidata.org/) <br>
 More details: [GitHub](https://github.com/mx-hxh/epistemic-injustice-on-wikipedia); [Tableau Public](https://public.tableau.com/app/profile/miao.xi/viz/DecodingEpistemicInjusticetowardsWomenonWikipedia/Dashboard)
-&nbsp;<br>
+&nbsp;<br>&nbsp;<br>
 
 
 ---
