@@ -1,4 +1,4 @@
-﻿# **Portfolio**
+# **Portfolio**
 
 ---
 ## **Data Analytics**
@@ -22,12 +22,12 @@ More details: [GitHub](https://github.com/mx-hxh/colab-solar)
 
 ### **Project 2:**  Decoding Epistemic Injustice towards Women on Wikipedia
 Epistemic injustice is related to knowledge. Women have suffered from such injustice by being historically underdocumented and their achievements less acknowledged. This project aims to extract article counts about men and women and those articles' respective page view data from Wikipedia's query and REST API services to understood how women are underdocumented on this primary open source knowledge platform.<br>
-<font size="2">[Python](#tag); [SPARQL](#tag); [REST API](#tag); [Multiprocessing](#tag); [Tableau](#tag)</font>
+[Python](#tag); [SPARQL](#tag); [REST API](#tag); [Multiprocessing](#tag); [Tableau](#tag)
 <br>
 
  **Visualization**:<br>
 <img src="images/Epistemic_injustice_tableau.png" width="700"/> <br>
-<font size="2">[View Full in Tableau Public](https://public.tableau.com/app/profile/miao.xi/viz/DecodingEpistemicInjusticetowardsWomenonWikipedia/Dashboard)</font>
+[View Full in Tableau Public](https://public.tableau.com/app/profile/miao.xi/viz/DecodingEpistemicInjusticetowardsWomenonWikipedia/Dashboard)
 <br>
 
 **Code**:<br>
@@ -44,7 +44,7 @@ More details: [GitHub](https://github.com/mx-hxh/epistemic-injustice-on-wikipedi
 
 ### **Project 1:** RoBuEM - Robust Embedding for Deep Entity Matcher against Input Noise
 [Deep entity matcher](https://pages.cs.wisc.edu/~anhai/papers1/deepmatcher-sigmod18.pdf) leverages the STOA word embeddings and deep learning models to identify same entities between largely different data sources. But human input errors such as typos pose challenge to such task becuase most embeddings are trained on error free corpus hence performs not well against noisy records with high level of typos. This project proposed a solution that generates robust word embedding using [FastText](https://fasttext.cc/) model from scratch based on the input datasets. Hence, it is customizable on any given EM task.<br>
-<font size="2">[Python](#tag); [NLP](#tag); [Deep Learning](#tag); [Entity Matching](#tag); [Word Embedding](#tag)</font>
+[Python](#tag); [NLP](#tag); [Deep Learning](#tag); [Entity Matching](#tag); [Word Embedding](#tag)</font>
 <br>
 
 **Visualizations:**<br>
@@ -63,3 +63,6 @@ More details: [GitHub](https://github.com/mx-hxh/robust-entity-matching); [Proje
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
 <!-- Remove above link if you don't want to attibute -->
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTQ4NzM5OTUxNV19
+-->
