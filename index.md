@@ -5,7 +5,7 @@
 
 ### **Project 1:**  Solar Power Plant Performance Analysis
 Solar panel power generation could be impacted by various factors beyond irradiation such as dust covering, faulty equipments etc. This project aims to detect performance issues in a given solar plant, identify inverters with underperforming panels that needs cleaning or maintenance.<br>
-<font size="3">[Python](#tag); [EDA](#tag); [Clustering](#tag); [Time Series Analysis](#tag); [Regression Analysis](#tag)</font>
+<font size="2">[Python](#tag); [EDA](#tag); [Clustering](#tag); [Time Series Analysis](#tag); [Regression Analysis](#tag)</font>
 <br>
 
 **Visualizations:**<br>
@@ -22,12 +22,12 @@ More details: [GitHub](https://github.com/mx-hxh/colab-solar)
 
 ### **Project 2:**  Decoding Epistemic Injustice towards Women on Wikipedia
 Epistemic injustice is related to knowledge. Women have suffered from such injustice by being historically underdocumented and their achievements less acknowledged. This project aims to extract article counts about men and women and those articles' respective page view data from Wikipedia's query and REST API services to understood how women are underdocumented on this primary open source knowledge platform.<br>
-<font size="3">[Python](#tag); [SPARQL](#tag); [REST API](#tag); [Multiprocessing](#tag); [Tableau](#tag)</font>
+<font size="2">[Python](#tag); [SPARQL](#tag); [REST API](#tag); [Multiprocessing](#tag); [Tableau](#tag)</font>
 <br>
 
  **Visualization**:<br>
-<img src="images/Epistemic_injustice_tableau.png" width="700"/> 
-<font size="3">[View Full in Tableau Public](https://public.tableau.com/app/profile/miao.xi/viz/DecodingEpistemicInjusticetowardsWomenonWikipedia/Dashboard)</font>
+<img src="images/Epistemic_injustice_tableau.png" width="700"/> <br>
+<font size="2">[View Full in Tableau Public](https://public.tableau.com/app/profile/miao.xi/viz/DecodingEpistemicInjusticetowardsWomenonWikipedia/Dashboard)</font>
 <br>
 
 **Code**:<br>
@@ -44,7 +44,7 @@ More details: [GitHub](https://github.com/mx-hxh/epistemic-injustice-on-wikipedi
 
 ### **Project 1:** RoBuEM - Robust Embedding for Deep Entity Matcher against Input Noise
 [Deep entity matcher](https://pages.cs.wisc.edu/~anhai/papers1/deepmatcher-sigmod18.pdf) leverages the STOA word embeddings and deep learning models to identify same entities between largely different data sources. But human input errors such as typos pose challenge to such task becuase most embeddings are trained on error free corpus hence performs not well against noisy records with high level of typos. This project proposed a solution that generates robust word embedding using [FastText](https://fasttext.cc/) model from scratch based on the input datasets. Hence, it is customizable on any given EM task.<br>
-<font size="3">[Python](#tag); [NLP](#tag); [Deep Learning](#tag); [Entity Matching](#tag); [Word Embedding](#tag)</font>
+<font size="2">[Python](#tag); [NLP](#tag); [Deep Learning](#tag); [Entity Matching](#tag); [Word Embedding](#tag)</font>
 <br>
 
 **Visualizations:**<br>
@@ -56,7 +56,7 @@ More details: [GitHub](https://github.com/mx-hxh/epistemic-injustice-on-wikipedi
 <a  href="https://colab.research.google.com/drive/198L_VF7WJBBAAKpzgC04_PT09Sr_gwVq?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
 
 Data source: [DeepMatcher Paper](https://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md) <br>
-More details: [GitHub](https://github.com/mx-hxh/robust-entity-matching); [Project Report](pdf/rebuem_report.pdf)
+More details: [GitHub](https://github.com/mx-hxh/robust-entity-matching); [Project Report](pdf/robuem_report.pdf)
 &nbsp;<br>&nbsp;<br>
 
 
