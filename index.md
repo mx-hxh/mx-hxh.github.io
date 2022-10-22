@@ -3,18 +3,12 @@
 ---
 ## **Data Analytics**
 
-**<font size="5">Project 1**:</font> detect performance issues in a given solar plant, identify inverters with underperforming panels<br><br>
+**Project 1:** detect performance issues in a given solar plant, identify inverters with underperforming panels<br><br>
 
 **Visualizations:**<br>
 <img src="images/inverter_light_conversion.png" width="700"/> 
 <img src="images/optimal K.png" width="700"/><br>
 <br><br>
-**Techniques:**
-
- 1. EDA 
- 2. Clustering 
- 3. Time-series analysis
-
 
 **Code:** <br>
 <a  href="https://colab.research.google.com/drive/1btPn-c57E9ND-kv4wNZT-GEnkKFZuW44?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
@@ -23,20 +17,15 @@ Data source: [Kaggle](https://www.kaggle.com/anikannal/solar-power-generation-da
 More details: [GitHub](https://github.com/mx-hxh/colab-solar)
 &nbsp;<br>&nbsp;<br>
 
-**<font size="5">Project 2**:</font>detect epistemic injustice towards women on Wikipedia
+**Project 2:** detect epistemic injustice towards women on Wikipedia
 <br><br>
-**Techniques**:
 
- 1. SPARQL
- 2. REST API
- 3. Multiprocessing
- 4. Tableau
+ **Visualization**:<br>
+<img src="images/Epistemic_injustice_tableau.png" width="700"/> <br>
 
 **Code**:<br>
 <a href="https://colab.research.google.com/drive/1k4TkItYtppNolsXvqVLrPQvIeGS6mrCy?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
  
- **Visualization**:<br>
-<img src="images/Epistemic_injustice_tableau.png" width="700"/> <br>
 Data source: [Wikidata](https://query.wikidata.org/) <br>
 More details: [GitHub](https://github.com/mx-hxh/epistemic-injustice-on-wikipedia); [Tableau Public](https://public.tableau.com/app/profile/miao.xi/viz/DecodingEpistemicInjusticetowardsWomenonWikipedia/Dashboard)
 &nbsp;<br>&nbsp;<br>
