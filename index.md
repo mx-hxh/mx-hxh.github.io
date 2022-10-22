@@ -2,28 +2,32 @@
 
 ---
 ## **Data Analytics**
-<details>
-<summary>**Project 1**: detect performance issues in a given solar plant, identify inverters with underperforming panels</summary>
+
+**Project 1**: detect performance issues in a given solar plant, identify inverters with underperforming panels<br><br>
+
+Visualizations:<br>
+<img src="images/inverter_light_conversion.png" width="700"/> 
+<img src="images/optimal K.png" width="700"/><br>
 <br><br>
-**Techniques**:
+
+<details>
+<summary>Additional details</summary>
+<br>
+Techniques:
 
  1. EDA 
  2. Clustering 
  3. Time-series analysis
 
-**Code**:<br>
-<a  href="https://colab.research.google.com/drive/1btPn-c57E9ND-kv4wNZT-GEnkKFZuW44?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
-
-**Visualization**:<br>
-<img src="images/inverter_light_conversion.png" width="700"/> 
-<img src="images/optimal K.png" width="700"/><br>
+<br>
+Code: <a  href="https://colab.research.google.com/drive/1btPn-c57E9ND-kv4wNZT-GEnkKFZuW44?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
 
 Data source: [Kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data) <br>
-More details: [GitHub](https://github.com/mx-hxh/colab-solar)
+	More details: [GitHub](https://github.com/mx-hxh/colab-solar)
 </details>
 &nbsp;<br>&nbsp;<br>
-<details open>
-<summary>**Project 2**: detect epistemic injustice towards women on Wikipedia</summary>
+
+**Project 2**: detect epistemic injustice towards women on Wikipedia
 </br><br>
 **Techniques**:
 
