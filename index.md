@@ -18,7 +18,8 @@ Data source: [Kaggle](https://www.kaggle.com/anikannal/solar-power-generation-da
 More details: [GitHub](https://github.com/mx-hxh/colab-solar)
 &nbsp;<br>&nbsp;<br>
 
-**Project 2:** detect epistemic injustice towards women on Wikipedia
+### **Project 2:**  Decoding Epistemic Injustice towards Women on Wikipedia
+Epistemic injustice is related to knowledge. Women have suffered from such injustice by being historically underdocumented and their achievements less acknowledged. This project aims to extract article counts about men and women and those articles' respective page view data from Wikipedia's query and REST API services to understood how women are underdocumented on this primary open source knowledge platform.
 <br><br>
 
  **Visualization**:<br>
@@ -34,40 +35,22 @@ More details: [GitHub](https://github.com/mx-hxh/epistemic-injustice-on-wikipedi
 
 ---
 
-# **Natural Language Processing**
-## **I. Sentiment classification with US Airline twitts**
+## **Natural Language Processing**
 
-<div align="center"><img src="images/icons8-twitter-64.png?raw=true"/></div>
+### **Project 1:** RoBuEM: Robust Embedding for Deep Entity Matcher against Input Noise
+Deep entity matcher leverage the STOA word embeddings and deep learning models to identify the same entities between largely different data sources. But human input errors such as typos pose challenge to such task becuase most embeddings are trained on error free corpus hence performs not well against noisy records with high level of typos. In this project proposed a solution that generates robust word embedding using [FastText](https://fasttext.cc/) model from scratch based on the input datasets. Hence, it is customizable on any given EM task.<br><br>
 
-### **Introduction**
-This project aims to classify positive and negative sentiments from a set of unlabeled twitts about major US airlines.
+**Visualizations:**<br>
+<img src="images/EM_pipeline.png" width="700"/><br>
+<img src="images/robuem_performance.png" width="700"/> 
+<br><br>
 
-### **Project Delivery**
-[Code](/Codes/R/US_Airline_Sentiment)
+**Code:** <br>
+<a  href="https://colab.research.google.com/drive/198L_VF7WJBBAAKpzgC04_PT09Sr_gwVq?usp=sharing"  target="_parent"><img  src="https://colab.research.google.com/assets/colab-badge.svg"  alt="Open in Colab"/></a>
 
-[Project report](/pdf/USAirline_Report.pdf)
-
-## **II. Food trend identification from facebook posts**
-
-<div align="center"><img src="images/icons8-facebook-100.png?raw=true"/></div>
-
-### **Introduction**
-This project aims to help identifying food related trends from 4 million food related facebook posts span across 4 years.
-
-### **Project Delivery**
-[Code](/Codes/R/Food_Trend_Facebook)
-
-[Project report](/pdf/Cauliflower_Report.pdf)
-
----
-
-# **Information System & Design**
-## **Coming soon!**
-
-
----
-
-
+Data source: [DeepMatcher Paper](https://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md) <br>
+More details: [GitHub](https://github.com/mx-hxh/robust-entity-matching)
+&nbsp;<br>&nbsp;<br>
 
 
 ---
