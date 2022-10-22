@@ -2,9 +2,9 @@
 
 ---
 ## **Data Analytics**
-
-**Project 1**: detect performance issues in a given solar plant, identify inverters with underperforming panels
-&nbsp;<br>
+<details>
+<summary>**Project 1**: detect performance issues in a given solar plant, identify inverters with underperforming panels</summary>
+<br><br>
 **Techniques**:
 
  1. EDA 
@@ -20,9 +20,11 @@
 
 Data source: [Kaggle](https://www.kaggle.com/anikannal/solar-power-generation-data) <br>
 More details: [GitHub](https://github.com/mx-hxh/colab-solar)
+</details>
 &nbsp;<br>&nbsp;<br>
-**Project 2**: detect epistemic injustice towards women on Wikipedia
-</br>
+<details open>
+<summary>**Project 2**: detect epistemic injustice towards women on Wikipedia</summary>
+</br><br>
 **Techniques**:
 
  1. SPARQL
@@ -37,6 +39,7 @@ More details: [GitHub](https://github.com/mx-hxh/colab-solar)
 <img src="images/Epistemic_injustice_tableau.png" width="700"/> <br>
 Data source: [Wikidata](https://query.wikidata.org/) <br>
 More details: [GitHub](https://github.com/mx-hxh/epistemic-injustice-on-wikipedia); [Tableau Public](https://public.tableau.com/app/profile/miao.xi/viz/DecodingEpistemicInjusticetowardsWomenonWikipedia/Dashboard)
+</details>
 &nbsp;<br>&nbsp;<br>
 
 
