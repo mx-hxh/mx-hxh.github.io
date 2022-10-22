@@ -3,11 +3,12 @@
 ---
 ## **Data Analytics**
 
-**Project 1:** detect performance issues in a given solar plant, identify inverters with underperforming panels<br><br>
+### **Project 1:**  Solar Power Plant Performance Analysis
+Solar panel power generation could be impacted by various factors beyond irradiation such as dust covering, faulty equipments etc. This project aims to detect performance issues in a given solar plant, identify inverters with underperforming panels that needs cleaning or maintenance.<br><br>
 
 **Visualizations:**<br>
-<img src="images/inverter_light_conversion.png" width="700"/> 
-<img src="images/optimal K.png" width="700"/><br>
+<img src="images/Irradiation_conversion_dip.png" width="700"/><br>
+<img src="images/conversion_rate_varies.png" width="700"/> 
 <br><br>
 
 **Code:** <br>
